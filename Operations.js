@@ -17,7 +17,7 @@ class Operations {
             if (this.numberTwo === 0) throw Error("Devidend can't be a zero")
             return this.numberOne / this.numberTwo;
         } catch (error) {
-            console.log("Zero devision Error Occured!");
+            return "Zero devision Error Occured";
         }
     }
 }
