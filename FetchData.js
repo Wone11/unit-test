@@ -4,4 +4,15 @@ function FetchData(callback) {
     }, 100)
 }
 
-module.exports = FetchData;
+function FetchPromise() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Promise done!')
+        }, 100)
+    })
+}
+
+module.exports = {
+    FetchData,
+    FetchPromise
+};
