@@ -20,6 +20,10 @@ class Operations {
             return "Zero devision Error Occured";
         }
     }
+
+    Modulo() {
+        return this.numberOne % this.numberTwo;
+    }
 }
 
 module.exports = Operations
