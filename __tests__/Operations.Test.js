@@ -1,6 +1,7 @@
 const Operations = require("../Operations");
 const Addition = require("../Sum");
 const operation = new Operations(12, 0);
+const moduleTest = new Operations(56, 50);
 
 test('adds 50 + 12 to  equal 62', () => {
     expect(Addition(50, 12)).toBe(62);
@@ -17,6 +18,10 @@ test('Multiplication Operatios ', () => {
 test('Devision Operations', () => {
     expect(operation.Devide()).toBe('Zero devision Error Occured');
 });
+
+test('Modulo of 56 to 50 is 6', () => {
+    expect(moduleTest.Modulo()).toBe(6);
+})
 
 test('five square equals twenty five', () => {
     expect(5 * 5).toBe(25);
