@@ -1,4 +1,4 @@
-let FetchData = require('../FetchData');
+let { FetchData, FetchPromise } = require('../FetchData');
 
 test('data is peanut butter', done => {
     function callback(data) {
@@ -9,6 +9,17 @@ test('data is peanut butter', done => {
     }
     FetchData(callback);
 })
+
+test('Promise resolves Promise done!', () => {
+    return expect(FetchPromise()).resolves.toBe('Promise done!');
+
+});
+
+test('promise resolves the seme as above and async ', async () => {
+    let data = await FetchPromise();
+    expect(data).toBe('Promise done!')
+})
+
 
 /**
  * Below code of snipets for test a local callback function!
