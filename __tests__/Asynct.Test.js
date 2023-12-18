@@ -12,14 +12,12 @@ test('data is peanut butter', done => {
 
 test('Promise resolves Promise done!', () => {
     return expect(FetchPromise()).resolves.toBe('Promise done!');
-
 });
 
 test('promise resolves the seme as above and async ', async () => {
     let data = await FetchPromise();
     expect(data).toBe('Promise done!')
 })
-
 
 /**
  * Below code of snipets for test a local callback function!
